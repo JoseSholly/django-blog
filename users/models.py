@@ -8,7 +8,7 @@ class Profile(models.Model):
 
     def __str__(self) -> str:
         return f"{self.user.username} Profile"
-    
+    # Image Save
     def save(self, *args, **kwargs):
         super(Profile, self).save(*args, **kwargs)
         img= Image.open(self.image.path)
